@@ -465,3 +465,6 @@ footer {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+code { overflow-wrap: anywhere; word-break: break-all; }
+.notice p, .meta-line { overflow-wrap: anywhere; }
