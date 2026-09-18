@@ -1,0 +1,40 @@
+name: REALM support
+description: Ask a question or report a problem with REALM
+title: "Support"
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        REALM does not publish a support email. Use this public form.
+        Do not paste passwords, keys, or backup files.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - App / AWAKEN / Living Grove
+        - Account / sign-in
+        - Privacy
+        - Account deletion (prefer the deletion form)
+        - Website
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which REALM?
+      options:
+        - Google Play REALM (app.aetherrealm.realm)
+        - REALM EA Early Access (app.aetherrealm.realm.web)
+        - Website only
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened
+    validations:
+      required: true

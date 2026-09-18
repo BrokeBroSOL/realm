@@ -1,0 +1,49 @@
+name: REALM account deletion
+description: Request deletion of a REALM cloud account
+title: "Account deletion request"
+labels: ["account-deletion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request deletion of a REALM account.
+        Do not paste passwords, backup files, or authentication tokens.
+        This issue is public. If you do not want a public reply, say so below and close the issue after submitting — the request is still processed.
+  - type: input
+    id: google_email
+    attributes:
+      label: Google account email used to sign in to REALM
+      description: Used only to find the account.
+    validations:
+      required: true
+  - type: input
+    id: username
+    attributes:
+      label: REALM username (if you have one)
+    validations:
+      required: false
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which REALM did you use?
+      options:
+        - Google Play REALM (app.aetherrealm.realm)
+        - REALM EA Early Access (app.aetherrealm.realm.web)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else needed to identify the account
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I request deletion of the REALM cloud account matching this Google identity.
+          required: true
+        - label: I understand sign-out and uninstall do not delete the cloud account by themselves.
+          required: true
